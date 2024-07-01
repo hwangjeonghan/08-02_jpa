@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="jpatest">
+        <class>com.ohgiraffers.mapping.section01.entity.Member</class>
+        <class>com.ohgiraffers.mapping.section02.column.Member</class>
+        <class>com.ohgiraffers.mapping.section03.primarykey.identity.Member</class>
+        <class>com.ohgiraffers.mapping.section03.primarykey.table.Member</class>
+        <class>com.ohgiraffers.mapping.section04.enumtype.Member</class>
+        <class>com.ohgiraffers.mapping.section05.access.Member</class>
+        <class>com.ohgiraffers.mapping.section05.property.Member</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gangnam"/>
+            <property name="jakarta.persistence.jdbc.user" value="gangnam"/>
+            <property name="jakarta.persistence.jdbc.password" value="gangnam"/>
+            <!-- 데이터 베이스 연결하는것 -->
+
+            <property name="hibernate.show_sql" value="true"/>
+            <!--            쿼리 보여주는것-->
+            <property name="hibernate.format_sql" value="true"/>
+            <!--            쿼리를 보기쉬운 형식으로 보겠다고 하는것-->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <!--            데이터의 구조를 바꾸는것 create 테이블을 만들겠다 .엔티티를 너가 만들어라 항상 이테이블을-->
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
